@@ -13,6 +13,8 @@ public class ConcurRadixSort {
 
             auxList.addAll(aux.get(0));
             auxList.addAll(aux.get(1));
+            System.out.println(auxList);
+
             list = auxList;
 
         }
@@ -24,8 +26,7 @@ public class ConcurRadixSort {
         List ones  = new ArrayList();
         int mask = 1 << i;
 
-        list.stream().forEach((val) -> {
-                                        if (1 == (val & mask)){
+        list.stream().forEach((val) -> {if (1 == (val & mask)){
                                             ones.add(val);
                                         }else{
                                             zeros.add(val);

@@ -12,7 +12,7 @@ public class WorkGiver extends Thread {
 
         while (true) {
             this.buffer.push(tempTask);
-            System.out.println("WorkGiver entrega trabajo.");
+            System.out.println("WorkGiver entrega trabajo." );
 
         }
 
