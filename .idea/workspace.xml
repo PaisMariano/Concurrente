@@ -2,25 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd8e77b6-9e10-4518-8b53-b0aa5039049c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/Practica6/META-INF/Practica6.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Concurrente/META-INF/Practica6.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practica6/main/java/Ejercicio1/Contador.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Concurrente/main/java/Ejercicio1/Contador.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practica6/main/java/Ejercicio1/DecrementadorThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Concurrente/main/java/Ejercicio1/DecrementadorThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practica6/main/java/Ejercicio1/SumadorThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Concurrente/main/java/Ejercicio1/SumadorThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practica6/main/java/Ejercicio1/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Concurrente/main/java/Ejercicio1/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practica6/main/java/Ejercicio2/Semaforo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Concurrente/main/java/Ejercicio2/Semaforo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practica6/main/java/Ejercicio3/Buffer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Concurrente/main/java/Ejercicio3/Buffer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practica6/main/java/Ejercicio3/ConsumidorThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Concurrente/main/java/Ejercicio3/ConsumidorThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practica6/main/java/Ejercicio3/ProductorThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Concurrente/main/java/Ejercicio3/ProductorThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practica6/main/java/Ejercicio3/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Concurrente/main/java/Ejercicio3/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practica6/main/java/Ejercicio4/Barrera.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Concurrente/main/java/Ejercicio4/Barrera.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practica6/main/java/Ejercicio5/Evento.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Concurrente/main/java/Ejercicio5/Evento.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practica6/main/java/Ejercicio6/LectoresEscritores.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Concurrente/main/java/Ejercicio6/LectoresEscritores.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practica6/main/java/TP1/Buffer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Concurrente/main/java/TP1/Buffer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practica6/main/java/TP1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Concurrente/main/java/TP1/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practica6/main/java/TP1/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Concurrente/main/java/TP1/Task.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practica6/main/java/TP1/ThreadPool.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Concurrente/main/java/TP1/ThreadPool.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practica6/main/java/TP1/WorkGiver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Concurrente/main/java/TP1/WorkGiver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practica6/main/java/TP1/Worker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Concurrente/main/java/TP1/Worker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TP1/ConcurRadixSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TP1/ConcurRadixSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TP1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TP1/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,16 +13,30 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/TP1/Buffer.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/TP1/ConcurRadixSort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+            <state relative-caret-position="480">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/TP1/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="292">
+              <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -47,6 +45,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/TP1/ConcurRadixSort.java" />
+        <option value="$PROJECT_DIR$/src/main/java/TP1/Main.java" />
+      </list>
+    </option>
   </component>
   <component name="ProjectConfigurationFiles">
     <option name="files">
@@ -70,7 +76,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -100,11 +105,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -162,18 +169,19 @@
       <option name="presentableId" value="Default" />
       <updated>1558929666778</updated>
       <workItem from="1558929673492" duration="512000" />
-      <workItem from="1558930254459" duration="723000" />
+      <workItem from="1558930254459" duration="841000" />
+      <workItem from="1558998477923" duration="12650000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1235000" />
+    <option name="totallyTimeSpent" value="14003000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
+    <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25258964" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2565737" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -182,7 +190,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32884902" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -192,7 +200,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.32884902" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32884902" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -208,17 +216,30 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/TP1/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/TP1/Buffer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="285">
+          <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TP1/Buffer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/TP1/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+        <state relative-caret-position="292">
+          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/TP1/ConcurRadixSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -277,6 +298,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
