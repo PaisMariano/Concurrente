@@ -1,29 +1,35 @@
 package main.java.TP1;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
 
     public static void main(String[]args){
-        ConcurRadixSort concur = new ConcurRadixSort();
+
         ArrayList<Integer> arraycito = new ArrayList();
 
+        arraycito.add(5);
+        arraycito.add(4);
+        arraycito.add(10);
+        arraycito.add(24);
         arraycito.add(1);
-        arraycito.add(0);
-        arraycito.add(1);
-        arraycito.add(1);
-        arraycito.add(0);
-        arraycito.add(0);
-        arraycito.add(1);
-        arraycito.add(0);
-        arraycito.add(1);
+        arraycito.add(6);
+        arraycito.add(15);
+        arraycito.add(3);
+        arraycito.add(8);
 
-        //System.out.println(arraycito);
-        //List temp = concur.radixSort(arraycito);
-        //System.out.println(temp);
+        ConcurRadixSort crs = new ConcurRadixSort(10, arraycito, 5);
+        Task dummyTask  = new DummyTask();
+        Task task       = new RadixSortTask(arraycito);
+        Task poisonTask = new PoisonPillTask();
+        int i = 20; // Creo 20 dummyTask
 
-        ThreadPool tPool = new ThreadPool(10, 100);
-        tPool.launch();
+        while (i > 0){
+            crs.getThreadPool().launch(dummyTask);
+            i--;
+        }
+
+        crs.getThreadPool().stop();
+
     }
 }

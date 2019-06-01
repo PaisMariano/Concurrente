@@ -1,21 +1,24 @@
 package main.java.TP1;
 
-public class Worker extends Thread{
+public class Worker extends Thread {
     private Buffer buffer;
-    private int taskAmount;
     private int threadId;
+    private boolean flag;
 
-    public Worker(Buffer buffer, int taskAmount, int threadId){
-        this.threadId   = threadId;
-        this.buffer     = buffer;
-        this.taskAmount = taskAmount;
+    public Worker(Buffer buffer, int threadId) {
+        this.threadId = threadId;
+        this.buffer = buffer;
+        this.flag = true;
     }
 
-    public void run(){
-        while (taskAmount > 0){
-            this.buffer.pop().run();
-            System.out.println("Worker " + this.threadId + " trabaja.");
-            taskAmount--;
-        }
+    public void run() {
+        try {
+            while (this.flag) {
+                this.buffer.pop().run();
+                System.out.println("Worker " + this.threadId + " trabaja.");
+            }
+        }catch (PoisonException m){
+            this.flag = false;
+            System.out.println("Termino el Worker: " + this.threadId);}
     }
 }

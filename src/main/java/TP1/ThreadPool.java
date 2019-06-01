@@ -1,26 +1,28 @@
 package main.java.TP1;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class ThreadPool {
-    private List<Worker> workers = new ArrayList();
     private Buffer buffer;
+    private int workersAmount;
 
-    public ThreadPool(int workersAmount, int bufferSize){
-
+    public ThreadPool(int workersAmount, int bufferSize) {
+        this.workersAmount = workersAmount;
         this.buffer = new Buffer(bufferSize);
         int i = 0;
 
-        WorkGiver workGiver = new WorkGiver(this.buffer);
-        workGiver.start();
-
-        while(i < workersAmount){
-            this.workers.add(new Worker(buffer, 10, i));
-            i++;}
+        while (i < workersAmount) {
+            Worker tempWorker = new Worker(this.buffer, i);
+            tempWorker.start();
+            i++;
+        }
+    }
+    public void launch(Task task){
+        this.buffer.push(task);
     }
 
-    public void launch(){
-        workers.forEach(it -> it.start());
+    public void stop(){
+        for (int i = 0; i < workersAmount; i++) {
+            this.launch(new PoisonPillTask());
+        }
     }
+
 }
