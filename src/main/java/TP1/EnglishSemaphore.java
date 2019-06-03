@@ -1,7 +1,5 @@
 package main.java.TP1;
 
-import java.util.concurrent.locks.Condition;
-
 public class EnglishSemaphore {
 
         private int permits = 0;

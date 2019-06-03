@@ -3,6 +3,7 @@ package main.java.TP1;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.Semaphore;
 
 public class RadixSortTask extends Task {
     private int taskId;
@@ -12,7 +13,7 @@ public class RadixSortTask extends Task {
     private int from;
     private int to;
     private EnglishSemaphore englishSemaphore;
-    private java.util.concurrent.Semaphore mutex;
+    private Semaphore mutex;
 
     public RadixSortTask(List<Integer> toSortList,
                          Map<Integer, List<List<Integer>>> zerosAndOnesList,
@@ -21,7 +22,7 @@ public class RadixSortTask extends Task {
                          int to,
                          int taskId,
                          EnglishSemaphore englishSemaphore,
-                         java.util.concurrent.Semaphore mutex){
+                         Semaphore mutex){
 
         this.taskId = taskId;
         this.toSortList = toSortList;
@@ -30,7 +31,7 @@ public class RadixSortTask extends Task {
         this.from = from;
         this.to = to;
         this.englishSemaphore = englishSemaphore;
-        this. mutex = mutex;
+        this.mutex = mutex;
     }
 
     @Override

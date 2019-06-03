@@ -8,6 +8,7 @@ public class ConcurRadixSort {
     private ThreadPool threadPool;
     private List<Integer> inputList;
     private int pretendedDivisionSize;
+    private EnglishSemaphore englishSemaphore;
     private Semaphore mutex;
 
     public ConcurRadixSort(int workersAmount, List<Integer> inputList, int bufferSize, int taskSize){
@@ -17,16 +18,15 @@ public class ConcurRadixSort {
     }
     public void radixSort() {
         int taskAmount = pretendedDivisionSize;
-        EnglishSemaphore englishSemaphore;
-        if (inputList.size() % this.pretendedDivisionSize != 0) { //averiguo cantidad de divisiones
+        if (inputList.size() % this.pretendedDivisionSize != 0) //averiguo cantidad de divisiones
             taskAmount = this.pretendedDivisionSize + 1;
-        }
+
         for (int i=0; i < 32; ++i) {
             mutex = new Semaphore(1);
-            Map<Integer, List<List<Integer>>> tempMap = new HashMap<>();
             englishSemaphore = new EnglishSemaphore(taskAmount);
+            Map<Integer, List<List<Integer>>> tempMap = new HashMap<>();
             int last = inputList.size() - 1;
-            int from = 0;
+            int from =  0;
             int to   = -1;
 
             for (int taskId = 0; taskId < taskAmount; taskId++) {
