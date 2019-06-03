@@ -2,7 +2,6 @@ import main.java.TP1.ConcurRadixSort;
 
 import org.junit.Assert;
 import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -26,45 +25,55 @@ public class TestRadixSort {
     @Test
     public void testUnWorkerDosNumerosAlAzarDiezBufferUnoTamañoTask() {
         List<Integer> tempList = createRandomIntegerListOfSize(2);
+        List<Integer> tempList2 = new ArrayList<>();
+        tempList2.addAll(tempList);
         concurRadixSort = new ConcurRadixSort(1, tempList,10,1 );
-        Collections.sort(tempList);
+        Collections.sort(tempList2);
         concurRadixSort.radixSort();
-        Assert.assertEquals(tempList, concurRadixSort.radixSort());
+        Assert.assertEquals(tempList2, concurRadixSort.radixSort());
     }
 
     @Test
     public void testDosWorkerCuatroNumerosAlAzarDiezBufferDosTamañoTask() {
         List<Integer> tempList = createRandomIntegerListOfSize(4);
+        List<Integer> tempList2 = new ArrayList<>();
+        tempList2.addAll(tempList);
         concurRadixSort = new ConcurRadixSort(2, tempList,10,2 );
-        Collections.sort(tempList);
+        Collections.sort(tempList2);
         concurRadixSort.radixSort();
-        Assert.assertEquals(tempList, concurRadixSort.radixSort());
+        Assert.assertEquals(tempList2, concurRadixSort.radixSort());
     }
 
     @Test
     public void testDiezWorkerDiezNumerosAlAzarDiezBufferDosTamañoTask() {
         List<Integer> tempList = createRandomIntegerListOfSize(10);
+        List<Integer> tempList2 = new ArrayList<>();
+        tempList2.addAll(tempList);
         concurRadixSort = new ConcurRadixSort(10, tempList,10,2 );
-        Collections.sort(tempList);
+        Collections.sort(tempList2);
         concurRadixSort.radixSort();
-        Assert.assertEquals(tempList, concurRadixSort.radixSort());
+        Assert.assertEquals(tempList2, concurRadixSort.radixSort());
     }
 
     @Test
     public void testMilWorkerDiezMilNumerosAlAzarVeinteBufferDiezTamañoTask() {
         List<Integer> tempList = createRandomIntegerListOfSize(10000);
+        List<Integer> tempList2 = new ArrayList<>();
+        tempList2.addAll(tempList);
         concurRadixSort = new ConcurRadixSort(1000, tempList,20,10 );
-        Collections.sort(tempList);
+        Collections.sort(tempList2);
         concurRadixSort.radixSort();
-        Assert.assertEquals(tempList, concurRadixSort.radixSort());
+        Assert.assertEquals(tempList2, concurRadixSort.radixSort());
     }
 
     @Test
     public void testDiezMilWorkerUnMillonNumerosAlAzarCienBufferCincuentaTamañoTask() {
         List<Integer> tempList = createRandomIntegerListOfSize(1000000);
+        List<Integer> tempList2 = new ArrayList<>();
+        tempList2.addAll(tempList);
         concurRadixSort = new ConcurRadixSort(10000, tempList,100,50 );
-        Collections.sort(tempList);
+        Collections.sort(tempList2);
         concurRadixSort.radixSort();
-        Assert.assertEquals(tempList, concurRadixSort.radixSort());
+        Assert.assertEquals(tempList2, concurRadixSort.radixSort());
     }
 }
