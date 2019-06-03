@@ -1,7 +1,6 @@
 package main.java.TP1;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class ConcurRadixSort {
 
@@ -9,11 +8,11 @@ public class ConcurRadixSort {
     private List<Integer> inputList;
     private int pretendedDivisionSize;
 
-    public ConcurRadixSort(int workersAmount, List<Integer> list, int bufferSize){
-        java.util.concurrent.Semaphore mutex = new java.util.concurrent.Semaphore(1);
-        this.inputList = list;
-        this.threadPool = new ThreadPool(workersAmount, bufferSize, mutex);
-        this.pretendedDivisionSize = 10;
+    public ConcurRadixSort(int workersAmount, List<Integer> inputList, int bufferSize, int taskSize){
+
+        this.inputList = inputList;
+        this.threadPool = new ThreadPool(workersAmount, bufferSize);
+        this.pretendedDivisionSize = taskSize;
     }
     public void radixSort() {
         int taskAmount = pretendedDivisionSize;
@@ -22,38 +21,39 @@ public class ConcurRadixSort {
             taskAmount = this.pretendedDivisionSize + 1;
         }
         for (int i=0; i < 32; ++i) {
-            List<List<Integer>> tempList = new ArrayList<>();
+            Map<Integer, List<List<Integer>>> tempMap = new HashMap<>();
             semaphore = new Semaphore(taskAmount);
             int last = inputList.size() - 1;
             int from = 0;
             int to   = -1;
-            for (int k = 0; k < taskAmount; k++) {
+
+            for (int taskId = 0; taskId < taskAmount; taskId++) {
 
                 to = to + (inputList.size() / this.pretendedDivisionSize);
-                if ((taskAmount - k) == 1) { to = last; } //Cuando estoy en el ultimo caso to tiene que ser last.
+                if ((taskAmount - taskId) == 1) { to = last; } //Cuando estoy en el ultimo caso to tiene que ser last.
 
-                this.launch(new RadixSortTask(this.inputList, tempList, i, from, to, semaphore));
+                this.launch(new RadixSortTask(this.inputList, tempMap, i, from, to, taskId, semaphore));
 
                 from = to + 1;
             }
             semaphore.acquire(); //espero a que terminen los workers.
-            this.orderUp(tempList);
+            this.orderUp(tempMap);
         }
-        System.out.println(this.inputList);
+        System.out.println("Lista de Salida: " + this.inputList);
     }
 
-    private void orderUp(List<List<Integer>> tempList) {
+    private void orderUp(Map<Integer, List<List<Integer>>> tempMap) {
+        List<Integer> sortedList = new ArrayList();
+        TreeMap<Integer, List<List<Integer>>> sorted = new TreeMap<>(tempMap);
+        Set<Map.Entry<Integer, List<List<Integer>>>> mappings = sorted.entrySet();
 
-            List sortedList = new ArrayList();
-
-            for (int i = 0; i < tempList.size(); i = i + 2) {
-                sortedList.addAll(tempList.get(i));
-            }
-            for (int j = 1; j < tempList.size(); j = j + 2) {
-                sortedList.addAll(tempList.get(j));
-            }
-
-            this.inputList = sortedList;
+        for(Map.Entry<Integer, List<List<Integer>>> mapping : mappings) {
+                sortedList.addAll(mapping.getValue().get(0));
+        }
+        for(Map.Entry<Integer, List<List<Integer>>> mapping : mappings) {
+                sortedList.addAll(mapping.getValue().get(1));
+        }
+        this.inputList = sortedList;
     }
 
     public void launch(Task task){ this.threadPool.launch(task); }

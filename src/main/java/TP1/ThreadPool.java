@@ -1,20 +1,18 @@
 package main.java.TP1;
 
-import java.util.concurrent.Semaphore;
-
 public class ThreadPool {
     private Buffer buffer;
     private int workersAmount;
 
-    public ThreadPool(int workersAmount, int bufferSize, Semaphore mutex) {
+    public ThreadPool(int workersAmount, int bufferSize) {
         this.workersAmount = workersAmount;
         this.buffer = new Buffer(bufferSize);
-        int i = 0;
+        int threadId = 0;
 
-        while (i < workersAmount) {
-            Worker tempWorker = new Worker(this.buffer, i, mutex);
+        while (threadId < workersAmount) {
+            Worker tempWorker = new Worker(this.buffer, threadId);
             tempWorker.start();
-            i++;
+            threadId++;
         }
     }
     public void launch(Task task){

@@ -4,14 +4,14 @@ import java.util.ArrayList;
 
 public class Main {
 
-    public static void main(String[]args) throws InterruptedException {
+    public static void main(String[]args) {
 
         ArrayList<Integer> arraycito = new ArrayList();
         arraycito.add(2);
         arraycito.add(5);
         arraycito.add(1);
         arraycito.add(4);
-        arraycito.add(110);
+        /*arraycito.add(110);
         arraycito.add(80);
         arraycito.add(45);
         arraycito.add(22);
@@ -26,16 +26,14 @@ public class Main {
         arraycito.add(48);
         arraycito.add(34);
         arraycito.add(90);
-        arraycito.add(55);
+        arraycito.add(55);*/
 
-        ConcurRadixSort crs = new ConcurRadixSort(3, arraycito, 10);
+        ConcurRadixSort crs = new ConcurRadixSort(3, arraycito, 10, 2);
         Task dummyTask  = new DummyTask();
         Task poisonTask = new PoisonPillTask();
 
-        System.out.println(arraycito);
+        System.out.println("Lista de entrada: " + arraycito);
 
         crs.radixSort();
-
-
     }
 }
