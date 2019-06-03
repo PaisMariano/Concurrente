@@ -1,16 +1,18 @@
 package main.java.TP1;
 
+import java.util.concurrent.Semaphore;
+
 public class ThreadPool {
     private Buffer buffer;
     private int workersAmount;
 
-    public ThreadPool(int workersAmount, int bufferSize) {
+    public ThreadPool(int workersAmount, int bufferSize, Semaphore mutex) {
         this.workersAmount = workersAmount;
         this.buffer = new Buffer(bufferSize);
         int i = 0;
 
         while (i < workersAmount) {
-            Worker tempWorker = new Worker(this.buffer, i);
+            Worker tempWorker = new Worker(this.buffer, i, mutex);
             tempWorker.start();
             i++;
         }
@@ -24,5 +26,4 @@ public class ThreadPool {
             this.launch(new PoisonPillTask());
         }
     }
-
 }

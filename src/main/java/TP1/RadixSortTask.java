@@ -5,21 +5,21 @@ import java.util.List;
 
 public class RadixSortTask extends Task {
     private List<Integer> toSortList;
-    private List<List<Integer>> cerosAndOnesList;
+    private List<List<Integer>> zerosAndOnesList;
     private int i;
     private int from;
     private int to;
     private Semaphore semaphore;
 
     public RadixSortTask(List<Integer> toSortList,
-                         List<List<Integer>> cerosAndOnesList,
+                         List<List<Integer>> zerosAndOnesList,
                          int i,
                          int from,
                          int to,
                          Semaphore semaphore){
 
         this.toSortList = toSortList;
-        this.cerosAndOnesList = cerosAndOnesList;
+        this.zerosAndOnesList = zerosAndOnesList;
         this.i = i;
         this.from = from;
         this.to = to;
@@ -28,11 +28,9 @@ public class RadixSortTask extends Task {
 
     @Override
     public void run() {
-        this.addEveryone(this.split(this.toSortList, i, from, to, semaphore));
-        System.out.println("tempList Posterior: " + cerosAndOnesList);
+        this.addEveryone(this.split(this.toSortList, i, from, to));
     }
-
-    private List<List<Integer>> split(List<Integer> toSortList, int i, int from, int to, Semaphore semaphore) {
+    private List<List<Integer>> split(List<Integer> toSortList, int i, int from, int to) {
         List zeros = new ArrayList();
         List ones  = new ArrayList();
         int mask = 1 << i;
@@ -51,9 +49,9 @@ public class RadixSortTask extends Task {
         return auxList;
     }
 
-    private synchronized void addEveryone(List<List<Integer>> list){
-        this.cerosAndOnesList.addAll(list);
-        semaphore.release();
+    private void addEveryone(List<List<Integer>> list){
+        this.zerosAndOnesList.addAll(list);
+        this.semaphore.release();
     }
 
 }

@@ -10,11 +10,12 @@ public class ConcurRadixSort {
     private int pretendedDivisionSize;
 
     public ConcurRadixSort(int workersAmount, List<Integer> list, int bufferSize){
+        java.util.concurrent.Semaphore mutex = new java.util.concurrent.Semaphore(1);
         this.inputList = list;
-        this.threadPool = new ThreadPool(workersAmount, bufferSize);
-        this.pretendedDivisionSize = 2;
+        this.threadPool = new ThreadPool(workersAmount, bufferSize, mutex);
+        this.pretendedDivisionSize = 10;
     }
-    public void radixSort() throws InterruptedException {
+    public void radixSort() {
         int taskAmount = pretendedDivisionSize;
         Semaphore semaphore;
         if (inputList.size() % this.pretendedDivisionSize != 0) { //averiguo cantidad de divisiones
@@ -28,7 +29,6 @@ public class ConcurRadixSort {
             int to   = -1;
             for (int k = 0; k < taskAmount; k++) {
 
-                System.out.println("tempList Anterior: " + tempList);
                 to = to + (inputList.size() / this.pretendedDivisionSize);
                 if ((taskAmount - k) == 1) { to = last; } //Cuando estoy en el ultimo caso to tiene que ser last.
 
@@ -38,9 +38,8 @@ public class ConcurRadixSort {
             }
             semaphore.acquire(); //espero a que terminen los workers.
             this.orderUp(tempList);
-
-
         }
+        System.out.println(this.inputList);
     }
 
     private void orderUp(List<List<Integer>> tempList) {
@@ -55,7 +54,6 @@ public class ConcurRadixSort {
             }
 
             this.inputList = sortedList;
-
     }
 
     public void launch(Task task){ this.threadPool.launch(task); }
