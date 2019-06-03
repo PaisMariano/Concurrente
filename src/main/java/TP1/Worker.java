@@ -15,10 +15,9 @@ public class Worker extends Thread {
         try {
             while (this.flag) {
                 this.buffer.pop().run();
-                System.out.println("Worker " + this.threadId + " trabaja.");
             }
         }catch (PoisonException m){
             this.flag = false;
-            System.out.println("Termino el Worker: " + this.threadId);}
+        }
     }
 }

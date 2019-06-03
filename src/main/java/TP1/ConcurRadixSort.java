@@ -16,7 +16,7 @@ public class ConcurRadixSort {
         this.threadPool = new ThreadPool(workersAmount, bufferSize);
         this.pretendedDivisionSize = taskSize;
     }
-    public void radixSort() {
+    public List<Integer> radixSort() {
         int taskAmount = pretendedDivisionSize;
         if (inputList.size() % this.pretendedDivisionSize != 0) //averiguo cantidad de divisiones
             taskAmount = this.pretendedDivisionSize + 1;
@@ -40,7 +40,7 @@ public class ConcurRadixSort {
             englishSemaphore.acquire(); //espero a que terminen los workers.
             this.orderUp(tempMap);
         }
-        System.out.println("Lista de Salida: " + this.inputList);
+        return this.inputList;
     }
 
     private void orderUp(Map<Integer, List<List<Integer>>> tempMap) {
