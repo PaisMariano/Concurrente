@@ -1,28 +1,30 @@
 package main.java.TP1;
 
 import java.util.*;
+import java.util.concurrent.Semaphore;
 
 public class ConcurRadixSort {
 
     private ThreadPool threadPool;
     private List<Integer> inputList;
     private int pretendedDivisionSize;
+    private Semaphore mutex;
 
     public ConcurRadixSort(int workersAmount, List<Integer> inputList, int bufferSize, int taskSize){
-
         this.inputList = inputList;
         this.threadPool = new ThreadPool(workersAmount, bufferSize);
         this.pretendedDivisionSize = taskSize;
     }
     public void radixSort() {
         int taskAmount = pretendedDivisionSize;
-        Semaphore semaphore;
+        EnglishSemaphore englishSemaphore;
         if (inputList.size() % this.pretendedDivisionSize != 0) { //averiguo cantidad de divisiones
             taskAmount = this.pretendedDivisionSize + 1;
         }
         for (int i=0; i < 32; ++i) {
+            mutex = new Semaphore(1);
             Map<Integer, List<List<Integer>>> tempMap = new HashMap<>();
-            semaphore = new Semaphore(taskAmount);
+            englishSemaphore = new EnglishSemaphore(taskAmount);
             int last = inputList.size() - 1;
             int from = 0;
             int to   = -1;
@@ -32,11 +34,10 @@ public class ConcurRadixSort {
                 to = to + (inputList.size() / this.pretendedDivisionSize);
                 if ((taskAmount - taskId) == 1) { to = last; } //Cuando estoy en el ultimo caso to tiene que ser last.
 
-                this.launch(new RadixSortTask(this.inputList, tempMap, i, from, to, taskId, semaphore));
-
+                this.launch(new RadixSortTask(this.inputList, tempMap, i, from, to, taskId, englishSemaphore, mutex));
                 from = to + 1;
             }
-            semaphore.acquire(); //espero a que terminen los workers.
+            englishSemaphore.acquire(); //espero a que terminen los workers.
             this.orderUp(tempMap);
         }
         System.out.println("Lista de Salida: " + this.inputList);

@@ -2,11 +2,11 @@ package main.java.TP1;
 
 import java.util.concurrent.locks.Condition;
 
-public class Semaphore {
+public class EnglishSemaphore {
 
         private int permits = 0;
 
-    public Semaphore(int permits){ this.permits = permits; }
+    public EnglishSemaphore(int permits){ this.permits = permits; }
 
     public synchronized void acquire() {
         while (permits > 0) {

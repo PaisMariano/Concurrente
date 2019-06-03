@@ -11,7 +11,8 @@ public class RadixSortTask extends Task {
     private int i;
     private int from;
     private int to;
-    private Semaphore semaphore;
+    private EnglishSemaphore englishSemaphore;
+    private java.util.concurrent.Semaphore mutex;
 
     public RadixSortTask(List<Integer> toSortList,
                          Map<Integer, List<List<Integer>>> zerosAndOnesList,
@@ -19,7 +20,8 @@ public class RadixSortTask extends Task {
                          int from,
                          int to,
                          int taskId,
-                         Semaphore semaphore){
+                         EnglishSemaphore englishSemaphore,
+                         java.util.concurrent.Semaphore mutex){
 
         this.taskId = taskId;
         this.toSortList = toSortList;
@@ -27,12 +29,21 @@ public class RadixSortTask extends Task {
         this.i = i;
         this.from = from;
         this.to = to;
-        this.semaphore = semaphore;
+        this.englishSemaphore = englishSemaphore;
+        this. mutex = mutex;
     }
 
     @Override
     public void run() {
-        this.addEveryone(taskId, this.split(this.toSortList, i, from, to));
+        List<List<Integer>> tempList = this.split(this.toSortList, i, from, to);
+        try {
+            this.mutex.acquire();
+            this.addEveryone(taskId, tempList);
+            this.mutex.release();
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
     private List<List<Integer>> split(List<Integer> toSortList, int i, int from, int to) {
         List<Integer> zeros = new ArrayList();
@@ -52,9 +63,9 @@ public class RadixSortTask extends Task {
         return auxList;
     }
 
-    private synchronized void addEveryone(Integer taskId, List<List<Integer>> list){
+    private synchronized void addEveryone(Integer taskId, List<List<Integer>> list) {
         this.zerosAndOnesList.put(taskId, list);
-        this.semaphore.release();
+        this.englishSemaphore.release();
     }
 
 }
