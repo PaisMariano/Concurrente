@@ -2,14 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd8e77b6-9e10-4518-8b53-b0aa5039049c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Concurrente.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Concurrente.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_beta_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TP1/ConcurRadixSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TP1/ConcurRadixSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TP1/RadixSortTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TP1/RadixSortTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/Concurrente.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid11660.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ejercicio1/Contador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ejercicio1/DecrementadorThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ejercicio1/SumadorThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ejercicio1/main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ejercicio2/Semaforo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ejercicio3/Buffer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ejercicio3/ConsumidorThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ejercicio3/ProductorThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ejercicio3/main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ejercicio4/Barrera.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ejercicio5/Evento.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Ejercicio6/LectoresEscritores.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/Ejercicio1/Contador.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/Ejercicio1/DecrementadorThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/Ejercicio1/SumadorThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/Ejercicio1/main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/Ejercicio2/Semaforo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/Ejercicio3/Buffer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/Ejercicio3/ConsumidorThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/Ejercicio3/ProductorThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/Ejercicio3/main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/Ejercicio4/Barrera.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/Ejercicio5/Evento.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/Ejercicio6/LectoresEscritores.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/TestRadixSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestRadixSort.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/TestRadixSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestRadixSort.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/radixSort/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -27,8 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/TP1/ConcurRadixSort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+            <state relative-caret-position="600">
+              <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -36,8 +56,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/TP1/RadixSortTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+            <state relative-caret-position="-435">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/TestRadixSort.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="58" column="57" selection-start-line="58" selection-start-column="57" selection-end-line="58" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -48,8 +80,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/TP1/MutexMonitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="120">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -91,11 +123,11 @@
         <option value="$PROJECT_DIR$/src/main/java/TP1/EnglishSemaphore.java" />
         <option value="$PROJECT_DIR$/src/main/java/TP1/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/TP1/Worker.java" />
-        <option value="$PROJECT_DIR$/tests/TestRadixSort.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/TP1/MutexMonitor.java" />
         <option value="$PROJECT_DIR$/src/main/java/TP1/ConcurRadixSort.java" />
         <option value="$PROJECT_DIR$/src/main/java/TP1/RadixSortTask.java" />
+        <option value="$PROJECT_DIR$/tests/TestRadixSort.java" />
       </list>
     </option>
   </component>
@@ -113,7 +145,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -130,19 +161,7 @@
               <item name="Concurrente" type="b2602c69:ProjectViewProjectNode" />
               <item name="Concurrente" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Concurrente" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Concurrente" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="TP1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Concurrente" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Concurrente" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Concurrente" type="b2602c69:ProjectViewProjectNode" />
@@ -152,6 +171,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -191,16 +211,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestRadixSort">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.java.TP1.Main" />
+  <component name="RunManager" selected="JUnit.All in Concurrente">
+    <configuration name="All in Concurrente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Concurrente" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="main.java.TP1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -224,11 +239,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestRadixSort.testUnWorkerDiezNumerosAlAzarDiezBufferUnoTamañoTask" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Concurrente" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestRadixSort" />
+      <option name="METHOD_NAME" value="testUnWorkerDiezNumerosAlAzarDiezBufferUnoTamañoTask" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestRadixSort.testUnWorkerDosNumerosAlAzarDiezBufferUnoTamañoTask" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Concurrente" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestRadixSort" />
+      <option name="METHOD_NAME" value="testUnWorkerDosNumerosAlAzarDiezBufferUnoTamañoTask" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestRadixSort" />
+        <item itemvalue="JUnit.All in Concurrente" />
         <item itemvalue="JUnit.TestRadixSort.testDiezMilWorkerUnMillonNumerosAlAzarCienBufferCincuentaTamañoTask" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.TestRadixSort.testUnWorkerDiezNumerosAlAzarDiezBufferUnoTamañoTask" />
+        <item itemvalue="JUnit.TestRadixSort.testUnWorkerDosNumerosAlAzarDiezBufferUnoTamañoTask" />
+        <item itemvalue="JUnit.TestRadixSort" />
       </list>
     </recent_temporary>
   </component>
@@ -256,50 +293,50 @@
       <workItem from="1559585171222" duration="6400000" />
       <workItem from="1559611403525" duration="358000" />
       <workItem from="1559611849216" duration="410000" />
-      <workItem from="1559612329652" duration="1298000" />
+      <workItem from="1559612329652" duration="2178000" />
+      <workItem from="1559683162573" duration="1584000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestRadixSort - 2019.06.03 at 16h 49m 29s.xml">
-      <configuration name="TestRadixSort" configurationId="JUnit" />
+    <history-entry file="TestRadixSort_testUnWorkerDosNumerosAlAzarDiezBufferUnoTamañoTask - 2019.06.04 at 18h 24m 05s.xml">
+      <configuration name="TestRadixSort.testUnWorkerDosNumerosAlAzarDiezBufferUnoTamañoTask" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRadixSort - 2019.06.03 at 16h 50m 28s.xml">
-      <configuration name="TestRadixSort" configurationId="JUnit" />
+    <history-entry file="TestRadixSort_testUnWorkerDosNumerosAlAzarDiezBufferUnoTamañoTask - 2019.06.04 at 18h 24m 15s.xml">
+      <configuration name="TestRadixSort.testUnWorkerDosNumerosAlAzarDiezBufferUnoTamañoTask" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRadixSort - 2019.06.03 at 16h 53m 14s.xml">
-      <configuration name="TestRadixSort" configurationId="JUnit" />
+    <history-entry file="TestRadixSort_testUnWorkerDosNumerosAlAzarDiezBufferUnoTamañoTask - 2019.06.04 at 18h 24m 43s.xml">
+      <configuration name="TestRadixSort.testUnWorkerDosNumerosAlAzarDiezBufferUnoTamañoTask" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRadixSort - 2019.06.03 at 16h 55m 12s.xml">
-      <configuration name="TestRadixSort" configurationId="JUnit" />
+    <history-entry file="TestRadixSort_testUnWorkerDosNumerosAlAzarDiezBufferUnoTamañoTask - 2019.06.04 at 18h 24m 52s.xml">
+      <configuration name="TestRadixSort.testUnWorkerDosNumerosAlAzarDiezBufferUnoTamañoTask" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRadixSort - 2019.06.03 at 16h 55m 35s.xml">
-      <configuration name="TestRadixSort" configurationId="JUnit" />
+    <history-entry file="TestRadixSort_testUnWorkerDiezNumerosAlAzarDiezBufferUnoTamañoTask - 2019.06.04 at 18h 25m 03s.xml">
+      <configuration name="TestRadixSort.testUnWorkerDiezNumerosAlAzarDiezBufferUnoTamañoTask" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRadixSort - 2019.06.03 at 16h 56m 23s.xml">
-      <configuration name="TestRadixSort" configurationId="JUnit" />
+    <history-entry file="All_in_Concurrente - 2019.06.04 at 18h 33m 07s.xml">
+      <configuration name="All in Concurrente" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRadixSort - 2019.06.03 at 17h 03m 47s.xml">
-      <configuration name="TestRadixSort" configurationId="JUnit" />
+    <history-entry file="TestRadixSort_testDiezMilWorkerUnMillonNumerosAlAzarCienBufferCincuentaTamañoTask - 2019.06.04 at 18h 35m 26s.xml">
+      <configuration name="TestRadixSort.testDiezMilWorkerUnMillonNumerosAlAzarCienBufferCincuentaTamañoTask" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRadixSort - 2019.06.03 at 22h 36m 44s.xml">
-      <configuration name="TestRadixSort" configurationId="JUnit" />
+    <history-entry file="TestRadixSort_testDiezMilWorkerUnMillonNumerosAlAzarCienBufferCincuentaTamañoTask - 2019.06.04 at 18h 36m 28s.xml">
+      <configuration name="TestRadixSort.testDiezMilWorkerUnMillonNumerosAlAzarCienBufferCincuentaTamañoTask" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRadixSort - 2019.06.03 at 22h 45m 36s.xml">
-      <configuration name="TestRadixSort" configurationId="JUnit" />
+    <history-entry file="TestRadixSort_testDiezMilWorkerUnMillonNumerosAlAzarCienBufferCincuentaTamañoTask - 2019.06.04 at 18h 36m 56s.xml">
+      <configuration name="TestRadixSort.testDiezMilWorkerUnMillonNumerosAlAzarCienBufferCincuentaTamañoTask" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRadixSort - 2019.06.03 at 22h 56m 57s.xml">
-      <configuration name="TestRadixSort" configurationId="JUnit" />
+    <history-entry file="All_in_Concurrente - 2019.06.04 at 18h 37m 14s.xml">
+      <configuration name="All in Concurrente" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132495000" />
+    <option name="totallyTimeSpent" value="134959000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25896415" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26294822" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -308,7 +345,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32436472" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32436472" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39910313" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -491,37 +528,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/TestRadixSort.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/TP1/ConcurRadixSort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="70" column="64" selection-start-line="70" selection-start-column="64" selection-end-line="70" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="600">
+          <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/TP1/MutexMonitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="120">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TP1/ConcurRadixSort.java">
+    <entry file="file://$PROJECT_DIR$/tests/TestRadixSort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+        <state relative-caret-position="145">
+          <caret line="58" column="57" selection-start-line="58" selection-start-column="57" selection-end-line="58" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/TP1/RadixSortTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+        <state relative-caret-position="-435">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
