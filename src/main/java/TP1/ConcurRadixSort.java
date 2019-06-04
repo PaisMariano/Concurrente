@@ -1,7 +1,6 @@
 package main.java.TP1;
 
 import java.util.*;
-import java.util.concurrent.Semaphore;
 
 public class ConcurRadixSort {
 
@@ -9,7 +8,7 @@ public class ConcurRadixSort {
     private List<Integer> inputList;
     private int pretendedDivisionSize;
     private EnglishSemaphore englishSemaphore;
-    private Semaphore mutex;
+    private MutexMonitor mutexMonitor;
 
     public ConcurRadixSort(int workersAmount, List<Integer> inputList, int bufferSize, int taskSize){
         this.inputList = inputList;
@@ -22,7 +21,7 @@ public class ConcurRadixSort {
             taskAmount = this.pretendedDivisionSize + 1;
 
         for (int i=0; i < 32; ++i) {
-            mutex = new Semaphore(1);
+            mutexMonitor = new MutexMonitor();
             englishSemaphore = new EnglishSemaphore(taskAmount);
             Map<Integer, List<List<Integer>>> tempMap = new HashMap<>();
             int last = inputList.size() - 1;
@@ -34,7 +33,7 @@ public class ConcurRadixSort {
                 to = to + (inputList.size() / this.pretendedDivisionSize);
                 if ((taskAmount - taskId) == 1) { to = last; } //Cuando estoy en el ultimo caso to tiene que ser last.
 
-                this.launch(new RadixSortTask(this.inputList, tempMap, i, from, to, taskId, englishSemaphore, mutex));
+                this.launch(new RadixSortTask(this.inputList, tempMap, i, from, to, taskId, englishSemaphore, mutexMonitor));
                 from = to + 1;
             }
             englishSemaphore.acquire(); //espero a que terminen los workers.
